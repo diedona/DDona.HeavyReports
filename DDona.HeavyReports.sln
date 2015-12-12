@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDona.HeavyReports.RV", "DDona.HeavyReports.RV\DDona.HeavyReports.RV.csproj", "{149F0116-F5F4-4865-B913-73B2A3ED9EC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDona.HeavyReports.Infra", "DDona.HeavyReports.Infra\DDona.HeavyReports.Infra.csproj", "{A7A14A44-363B-4D60-ADBA-310083D6BEA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDona.HeavyReports.Web", "DDona.HeavyReports.Web\DDona.HeavyReports.Web.csproj", "{28303236-7833-4893-92FF-18E6B55088BF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{149F0116-F5F4-4865-B913-73B2A3ED9EC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{149F0116-F5F4-4865-B913-73B2A3ED9EC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{149F0116-F5F4-4865-B913-73B2A3ED9EC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{149F0116-F5F4-4865-B913-73B2A3ED9EC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7A14A44-363B-4D60-ADBA-310083D6BEA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7A14A44-363B-4D60-ADBA-310083D6BEA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7A14A44-363B-4D60-ADBA-310083D6BEA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7A14A44-363B-4D60-ADBA-310083D6BEA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28303236-7833-4893-92FF-18E6B55088BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28303236-7833-4893-92FF-18E6B55088BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28303236-7833-4893-92FF-18E6B55088BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28303236-7833-4893-92FF-18E6B55088BF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
