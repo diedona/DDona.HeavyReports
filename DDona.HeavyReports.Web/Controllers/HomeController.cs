@@ -18,20 +18,42 @@ namespace DDona.HeavyReports.Web.Controllers
 
         public FileResult PDF()
         {
-            LocalReport LocalReport = new LocalReport();
-            PersonTableAdapter PersonTableAdapter = new PersonTableAdapter();
-
             string ReportName = "Relatorio_Pessoas.pdf";
-            byte[] ReportBytes = null;
-
-            LocalReport.ReportPath = Server.MapPath("~/Reports/ReportPessoas.rdlc");
-            LocalReport.DataSources.Add(new ReportDataSource("dsPessoas", (object)PersonTableAdapter.GetData()));
-
-            Debug.WriteLine(DateTime.Now);
-            ReportBytes = LocalReport.Render("PDF");
-            Debug.WriteLine(DateTime.Now);
+            byte[] ReportBytes = RenderReport("PDF");
 
             return File(ReportBytes, "aplication/pdf", ReportName);
+        }
+
+        public FileResult Excel()
+        {
+            string ReportName = "Relatorio_Pessoas.xls";
+            byte[] ReportBytes = RenderReport("Excel");
+
+            return File(ReportBytes, "application/excel", ReportName);
+        }
+
+        private byte[] RenderReport(string Type)
+        {
+            LocalReport LocalReport = new LocalReport();
+            PersonTableAdapter PersonTableAdapter = new PersonTableAdapter();
+            byte[] ReportBytes = null;
+            Stopwatch sw = new Stopwatch();
+
+            LocalReport.ReportPath = Server.MapPath("~/Reports/ReportPessoas.rdlc");
+
+            sw.Start();
+            LocalReport.DataSources.Add(new ReportDataSource("dsPessoas", (object)PersonTableAdapter.GetData()));
+            sw.Stop();
+
+            Debug.WriteLine("{0} - Carregando a Query e passando pra objetos", sw.Elapsed);
+
+            sw.Restart();
+            ReportBytes = LocalReport.Render(Type);
+            sw.Stop();
+
+            Debug.WriteLine("{0} - Montando o PDF", sw.Elapsed);
+
+            return ReportBytes;
         }
     }
 }
