@@ -46,11 +46,21 @@
   <ItemGroup>
     <Compile Include="DataSets\dsReportPessoas.cs">
       <DependentUpon>dsReportPessoas.xsd</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="DataSets\dsReportPessoas.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsReportPessoas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\dsReportVendas.cs">
+      <DependentUpon>dsReportVendas.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSets\dsReportVendas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsReportVendas.xsd</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -72,16 +82,30 @@
     <EmbeddedResource Include="Reports\ReportPessoas.rdlc">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportVendas.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="DataSets\dsReportPessoas.xsc">
       <DependentUpon>dsReportPessoas.xsd</DependentUpon>
     </None>
     <None Include="DataSets\dsReportPessoas.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsReportPessoas.Designer.cs</LastGenOutput>
+      <LastGenOutput>dsReportPessoas1.Designer.cs</LastGenOutput>
     </None>
     <None Include="DataSets\dsReportPessoas.xss">
       <DependentUpon>dsReportPessoas.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsReportVendas.xsc">
+      <DependentUpon>dsReportVendas.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsReportVendas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsReportVendas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\dsReportVendas.xss">
+      <DependentUpon>dsReportVendas.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
